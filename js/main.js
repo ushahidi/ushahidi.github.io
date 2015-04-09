@@ -4,6 +4,7 @@ $(function () {
   var apiCallCount = 0;
 
   var countryName = location.href.substring(location.href.lastIndexOf('/#')+1, location.href.length);
+  countryName = countryName.replace('#','');
   initialMarkers.map(function (marker) {
     api.getData('getAddressPoints', marker, addMarkerToMaps)
   })
